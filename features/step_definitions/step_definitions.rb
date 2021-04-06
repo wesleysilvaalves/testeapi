@@ -15,3 +15,12 @@ Dado("que eu faça um get na api") do
     expect(@retorno.code).to eq(valor)
     puts @retorno
   end
+
+  Dado('que tenho um request') do
+    busca_produtos
+  end
+  
+  
+  Entao('a api retorna os resultados de busca.') do
+    puts @response
+  end

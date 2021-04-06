@@ -9,3 +9,8 @@ def get_cep_valido
     @retorno = HTTParty.get(url, :verify => false,
      :headers => { "Content-Type" => "application/json"})
    end 
+    
+  def busca_produtos
+    url = "https://api-gateway-qa.drogasil.com.br/search/v2/store/DROGASIL/channel/SITE/product/search/live?term=colg"
+    @response = HTTParty.get(url)
+  end
